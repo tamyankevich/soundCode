@@ -1,0 +1,82 @@
+{
+  "name": "soundcode",
+  "displayName": "soundCode",
+  "description": "A vocal interface for human in the loop coding",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.106.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "soundcode",
+          "title": "soundCode",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "soundcode": [
+        {
+          "type": "webview",
+          "id": "soundcode.voiceView",
+          "name": "",
+          "icon": "ext-icon.svg"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "soundCode",
+      "properties": {
+        "soundcode.geminiApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your Google Gemini API key from Google AI Studio"
+        },
+        "soundcode.elevenLabsApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your ElevenLabs API key for text-to-speech"
+        },
+        "soundcode.elevenLabsVoiceId": {
+          "type": "string",
+          "default": "EXAVITQu4vr4xnSDxMaL",
+          "description": "ElevenLabs voice ID (default: Sarah)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.106.1",
+    "@types/ws": "^8.18.1",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3"
+  },
+  "dependencies": {
+    "@google-cloud/speech": "^7.2.1",
+    "@google/generative-ai": "^0.24.1",
+    "mic": "^2.1.2",
+    "node-record-lpcm16": "^1.0.1",
+    "sox-audio": "^0.3.0",
+    "ws": "^8.18.3"
+  }
+}
