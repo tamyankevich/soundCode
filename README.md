@@ -1,71 +1,59 @@
-# soundcode README
+# soundCode
 
-This is the README for your extension "soundcode". After writing up a brief description, we recommend including the following sections.
+**Voice-first AI pair programming for people learning to code.**
 
-## Features
+## What is soundCode?
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+soundCode is a VS Code extension that lets you talk to AI about code instead of typing prompts. It's designed for people who are learning to code, whether you're a designer, photographer, career-switcher, or student taking your first programming class.
 
-For example if there is an image subfolder under your extension project workspace:
+## Why voice?
 
-\!\[feature X\]\(images/feature-x.png\)
+Speaking is a lower barrier than writing prompts:
+- Ask "dumb questions" without typing anxiety
+- Get real-time clarification when confused
+- Interrupt AI when explanations get overwhelming
+- Learn at your own pace through natural conversation
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Who is this for?
 
-## Requirements
+- **Career switchers** learning their first programming language
+- **Designers** building their own prototypes
+- **Students** who need patient explanations of concepts
+- **Non-native English speakers** who want to learn in their language
+- **Anyone** who finds typing technical questions intimidating
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+## How it works
 
-## Extension Settings
+1. Open soundCode in your VS Code sidebar
+2. Press the microphone button and speak naturally
+3. Ask questions about your code, request explanations, or get help debugging
+4. Interrupt anytime to clarify or course-correct
+5. AI responds in real-time with transcribed text (voice output coming soon)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Example use case
 
-For example:
+You're a photographer who built a print store but don't fully understand the backend code. Instead of Googling or struggling through documentation, you can:
 
-This extension contributes the following settings:
+- "Walk me through what happens when someone buys a print"
+- "Wait, what's a webhook? Explain it simply"
+- "Where does the customer's shipping address go?"
+- "How would I add a discount code feature?"
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+soundCode guides you through your own codebase at your pace.
 
-## Known Issues
+## Powered by
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- **Google Gemini Live API** for real-time voice transcription
+- **VS Code Extension API** for native IDE integration
+- **Node.js audio capture** for seamless microphone access
 
-## Release Notes
+## Future vision
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- Multi-language support (learn to code in Spanish, Mandarin, etc.)
+- Domain-specific analogies based on your background
+- Voice output for fully conversational experience
+- Collaborative debugging with interruption handling
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Built at Google AIE Hackathon 2025
