@@ -1,7 +1,9 @@
 import * as vscode from 'vscode';
+import dotenv from 'dotenv';
+dotenv.config();
 
-// TODO: Move to VS Code settings for production
-const ELEVENLABS_API_KEY = 'sk_24954233b43186870e97c66ceb4ff124c46e104051248ecb';
+// Load from environment variable - never commit API keys to source control
+const ELEVENLABS_API_KEY = process.env.ELEVENLABS_API_KEY;
 
 export class ElevenLabsClient {
     private apiKey: string;

@@ -1,5 +1,10 @@
 import * as vscode from 'vscode';
 import WebSocket from 'ws';
+import dotenv from 'dotenv';
+dotenv.config();
+
+// Load from environment variable - never commit API keys to source control
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
 export interface GeminiLiveCallbacks {
     onTranscription: (text: string, isFinal: boolean) => void;
@@ -9,8 +14,6 @@ export interface GeminiLiveCallbacks {
     onDisconnected: () => void;
 }
 
-// TODO: Move to environment variable or VS Code settings for production
-const GEMINI_API_KEY = 'AIzaSyDyZ-bSUOG2EssF2uZimk96p8QBLo3ZBgc';
 
 export class GeminiLiveClient {
     private ws: WebSocket | null = null;
@@ -22,8 +25,8 @@ export class GeminiLiveClient {
 
     constructor(callbacks: GeminiLiveCallbacks) {
         this.callbacks = callbacks;
-        // Try settings first, fall back to hardcoded key
-        this.apiKey = vscode.workspace.getConfiguration('soundcode').get('geminiApiKey', '') || GEMINI_API_KEY;
+        // Try settings first, fall back to environment variable
+        this.apiKey = vscode.workspace.getConfiguration('soundcode').get('geminiApiKey', '') || GEMINI_API_KEY || '';
     }
 
     setWorkspaceContext(context: string) {

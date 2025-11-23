@@ -74,6 +74,7 @@
   "dependencies": {
     "@google-cloud/speech": "^7.2.1",
     "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
     "mic": "^2.1.2",
     "node-record-lpcm16": "^1.0.1",
     "sox-audio": "^0.3.0",
