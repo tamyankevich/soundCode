@@ -3,6 +3,25 @@
   "displayName": "soundCode",
   "description": "A vocal interface for human in the loop coding",
   "version": "0.0.1",
+  "publisher": "YOUR_PUBLISHER_ID",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/soundcode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/soundcode/issues"
+  },
+  "keywords": [
+    "voice",
+    "ai",
+    "gemini",
+    "coding assistant",
+    "accessibility",
+    "speech-to-text",
+    "text-to-speech",
+    "pair programming"
+  ],
   "engines": {
     "vscode": "^1.106.1"
   },
@@ -12,6 +31,12 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "soundcode.testElevenLabs",
+        "title": "soundCode: Test ElevenLabs API Connection"
+      }
+    ],
     "viewsContainers": {
       "activitybar": [
         {
